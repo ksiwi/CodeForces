@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f first
+#define s second  
+#define int long long
+
+signed main() {
+
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while(t--) {
+
+        int n;
+        cin >> n;
+
+        bool found = false;
+        vector<int> a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22};
+        for(int i = 0; i < a.size(); i++) {
+
+            if(n >= a[i] && (n - a[i]) % 12 == 0) {
+
+                found = true;
+                cout << a[i] << " " << (n - a[i]) << endl;
+                break;
+
+            }
+
+        }
+
+        if(!found) {
+
+            cout << -1 << endl;
+
+        }
+        
+    }
+
+}

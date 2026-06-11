@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f first
+#define s second  
+
+int main() {
+
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while(t--) {
+
+        int n;
+        cin >> n;
+
+        int curVal = 1;
+        vector<int> ans;
+        while(n > 1) {
+
+            int x = curVal;
+            if(n == 3) {
+
+                cout << x << " " << x << " " << x + 1 << " " << x << " " << 
+                    x + 1 << " " << x + 2 << " " << x << " " << x + 2 << " " 
+                    << x + 1 << " " << x + 1 << " " << x + 2 << " " << x + 2 << " ";
+
+                break;
+
+            }
+
+            cout << x + 1 << " " << x << " " << x << " " << x + 1 << " " << x << " " << x + 1 << " " << x + 1 << " " << x << " ";
+            n -= 2;
+            curVal += 2;
+
+        }
+        cout << endl;
+        
+    }
+
+}
